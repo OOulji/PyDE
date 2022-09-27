@@ -1,5 +1,4 @@
 import numpy as np
-import matplotlib as plt
 from core import Integrate
 
 #Exponential function integration
@@ -18,5 +17,5 @@ while (x < 5):
 
     error = exp_real - exp_de[0]
 
-    print(f"Real:{exp_real}   Solver:{exp_de[0]}   Error: {error}")
+    print(f"Real:{exp_real: .5f}   Solver:{exp_de[0]: .5f}   Error: {error: .5f}")
 
