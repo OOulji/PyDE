@@ -1,3 +1,4 @@
 PyDE_venv/
+PyDE/__pycache__
 PyDE.code-workspace
 .vscode/
