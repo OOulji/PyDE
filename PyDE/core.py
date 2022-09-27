@@ -4,6 +4,7 @@ import numpy as np
 Integrators = {
 
     "Euler": EulerSolver,
+    "MidPoint" : MidPointSolver
 
 }
 

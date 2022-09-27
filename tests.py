@@ -7,22 +7,22 @@ import PyDE as pyde
 
 x : float = 0.0
 current_y: float = 1.0 
-step: float = 0.001
+step: float = 0.25
 eval_points = 0
 
 start = time.perf_counter()
 
-while (x < 5):
+while (x < 4):
 
     exp_real = np.exp(x + step)
-    exp_de = pyde.Integrate((current_y, ), (x, ), (lambda t,y: y, ), "Euler", step)
+    exp_de = pyde.Integrate((current_y, ), (x, ), (lambda t,y: y, ), "Euler", step) #Change solver string to test diferent solvers
 
     current_y = exp_de
     x += step
 
     error = exp_real - exp_de[0]
 
-    print(f"Point x = {x+step: .5f} | Real:{exp_real: .5f} | Solver:{exp_de[0]: .5f} | Error: {error: .5f}")
+    print(f"Point x = {x: .5f} | Real:{exp_real: .5f} | Solver:{exp_de[0]: .5f} | Error: {error: .5f}")
     eval_points += 1
 
 end = time.perf_counter()
