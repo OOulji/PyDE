@@ -7,7 +7,7 @@ import PyDE as pyde
 
 x : float = 0.0
 current_y: float = 1.0 
-step: float = 0.0001
+step: float = 0.001
 eval_points = 0
 
 start = time.perf_counter()

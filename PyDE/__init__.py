@@ -1,1 +1,1 @@
-from core import Integrate
+from .core import Integrate

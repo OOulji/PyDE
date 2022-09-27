@@ -1,4 +1,4 @@
-from solvers import *
+from .solvers import *
 import numpy as np
 
 Integrators = {
