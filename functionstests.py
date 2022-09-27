@@ -1,7 +1,7 @@
 import numpy as np
 import time
 
-from core import Integrate
+import PyDE as pyde
 
 #Exponential function integration
 
@@ -15,7 +15,7 @@ start = time.perf_counter()
 while (x < 5):
 
     exp_real = np.exp(x + step)
-    exp_de = Integrate((current_y, ), (x, ), (lambda t,y: y, ), "Euler", step)
+    exp_de = pyde.Integrate((current_y, ), (x, ), (lambda t,y: y, ), "Euler", step)
 
     current_y = exp_de
     x += step
