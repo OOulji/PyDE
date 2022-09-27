@@ -1,11 +1,16 @@
 import numpy as np
+import time
+
 from core import Integrate
 
 #Exponential function integration
 
 x : float = 0.0
 current_y: float = 1.0 
-step: float = 0.01
+step: float = 0.0001
+eval_points = 0
+
+start = time.perf_counter()
 
 while (x < 5):
 
@@ -17,5 +22,11 @@ while (x < 5):
 
     error = exp_real - exp_de[0]
 
-    print(f"Real:{exp_real: .5f}   Solver:{exp_de[0]: .5f}   Error: {error: .5f}")
+    print(f"Point x = {x+step: .5f} | Real:{exp_real: .5f} | Solver:{exp_de[0]: .5f} | Error: {error: .5f}")
+    eval_points += 1
 
+end = time.perf_counter()
+
+print("\n")
+
+print(f" Evaluated points: {eval_points} | Time: {end - start: .3f}")
