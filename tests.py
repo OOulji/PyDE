@@ -29,4 +29,4 @@ end = time.perf_counter()
 
 print("\n")
 
-print(f" Evaluated points: {eval_points} | Time: {end - start: .3f}")
+print(f" Evaluated points: {eval_points} | Time:{end - start: .3f}s")
